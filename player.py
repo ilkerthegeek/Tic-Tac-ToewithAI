@@ -34,7 +34,7 @@ class HumanPlayer(Player):
             # if that spot is not available on the board , we also say it's invalid
             try:
                 val = int(square)
-                if val not in game.available_moves:
+                if val not in game.available_moves():
                     raise ValueError
                 valid_square = True
             except ValueError:
